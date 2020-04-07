@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<link rel="shortcut icon" href="logo.png">
+		<link rel="stylesheet" href="chatstyles.css"/>
+		<link rel="stylesheet" href="newstyles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div><img src="logo.png" class="logo"></div>
+				<a href="newindex.html"><div class="navli">Home</div></a>
+				<a href="https://www.figma.com/proto/V0gPwl5feZaiLYDS1r7VDx/Untitled?node-id=0%3A2&scaling=min-zoom" target="_blank"><div class="navli">Figma prototype</div></a>
+				<a href="index.html"><div class="navli">Find friends!</div></a>
+				<a href="chatindex.html"><div class="navli">Chat</div></a>
+			</nav>
+		</header>
+		
+		<div class="top">
+			<h1 id="name" class="yes"> Malle </h1>
+			<!--<img class="imag" class="yes"  src="https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340"> -->
+		</div>
+		
+		<div id="list" class="center">
+		</div>
+		
+		<div class="bottom">
+			<button onclick="addpic();"> add picture </button>
+			<input id="insert">
+			<button onclick="addtext();"> send </button>
+		</div>
+		
+		<script>
+		var number=0;
+		
+		var histor=[];
+			histor.push("Hello!");
+			histor.push("How are you?");
+			histor.push("Wanna hang out?");	
+			
+			var count= histor.length;
+			
+			for (var index=0; index<count; index++){
+			
+				var textdiv=document.createElement("div");
+				textdiv.setAttribute("id", index+"message");
+				textdiv.setAttribute("class", "left");
+				document.getElementById("list").appendChild(textdiv);
+				
+				var profile=document.createElement("img");
+				profile.setAttribute("src", "https://media.macphun.com/img/uploads/customer/how-to/579/15531840725c93b5489d84e9.43781620.jpg?q=85&w=1340");
+				profile.setAttribute("class", "yes");
+				profile.setAttribute("class", "imag");
+				document.getElementById(index+"message").appendChild(profile);
+				
+				var paradiv=document.createElement("div");
+				paradiv.setAttribute("id", index+"content");
+				paradiv.setAttribute("class", "lefttext");
+				document.getElementById(index+"message").appendChild(paradiv);
+				
+				var mytext=document.createElement("p");
+				mytext.innerHTML=(histor[index])
+				document.getElementById(index+"content").appendChild(mytext);
+				
+				var timetext=document.createElement("p");
+				timetext.innerHTML="12.00"
+				timetext.setAttribute("class", "time");
+				document.getElementById(index+"content").appendChild(timetext);
+				
+				
+			}
+			
+			
+			
+		function addtext(){
+			
+			number=number+1;
+			
+			var textdiv=document.createElement("div");
+			textdiv.setAttribute("id", number+"message1");
+			textdiv.setAttribute("class", "right");
+			document.getElementById("list").appendChild(textdiv);
+			
+			var paradiv=document.createElement("div");
+			paradiv.setAttribute("id", number+"content1");
+			paradiv.setAttribute("class", "righttext");
+			document.getElementById(number+"message1").appendChild(paradiv);
+			
+			var mytext=document.createElement("p");
+			mytext.innerHTML=document.getElementById("insert").value;
+			document.getElementById(number+"content1").appendChild(mytext);
+			
+			var timetext=document.createElement("p");
+			timetext.innerHTML="12.01"
+			timetext.setAttribute("class", "time");
+			document.getElementById(number+"content1").appendChild(timetext);
+			
+			var profile=document.createElement("img");
+			profile.setAttribute("src", "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg");
+			profile.setAttribute("class", "yes");
+			profile.setAttribute("class", "imag");
+			document.getElementById(number+"message1").appendChild(profile);
+			
+			document.getElementById("insert").value="";
+		}
+		function addpic(){
+		
+			number=number+1;
+		
+			var textdiv=document.createElement("div");
+			textdiv.setAttribute("id", number+"message2");
+			textdiv.setAttribute("class", "right");
+			document.getElementById("list").appendChild(textdiv);
+			
+			var paradiv=document.createElement("div");
+			paradiv.setAttribute("id", number+"content2");
+			paradiv.setAttribute("class", "righttext");
+			document.getElementById(number+"message2").appendChild(paradiv);
+			
+			var pict=document.createElement("img");
+			var surc=document.getElementById("insert").value;
+			pict.setAttribute("src", surc);
+			pict.setAttribute("class", "pic");
+			document.getElementById(number+"content2").appendChild(pict);
+			
+			var timetext=document.createElement("p");
+			timetext.innerHTML="12.01"
+			timetext.setAttribute("class", "time");
+			document.getElementById(number+"content2").appendChild(timetext);
+			
+			var profile=document.createElement("img");
+			profile.setAttribute("src", "https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg");
+			profile.setAttribute("class", "yes");
+			document.getElementById(number+"message2").appendChild(profile);
+			
+			document.getElementById("insert").value="";
+		}
+		
+		</script>
+	</body>
+</html>

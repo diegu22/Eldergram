@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="randomstyles.css"/>
+		<title>Eldergram ©</title>
+		<link rel="shortcut icon" href="logo.png">
+		<link rel="stylesheet" href="newstyles.css">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<div><img src="logo.png" class="logo"></div>
+				<a href="newindex.html"><div class="navli">Home</div></a>
+				<a href="https://www.figma.com/proto/66qsoFt9STvLVhtqVy2sjT/PCREC?node-id=0%3A1&scaling=scale-down" target="_blank"><div class="navli">Figma prototype</div></a>
+				<a href="index.html"><div class="navli">Find friends!</div></a>
+				<a href="chatindex.html"><div class="navli">Chat</div></a>
+			</nav>
+		</header>
+		
+		<div id="list">
+			 
+		</div>
+		<script>
+		
+			var namelist=[];
+			namelist.push("Mari");
+			namelist.push("Malle");
+			namelist.push("Kalle");
+			namelist.push("Rein");
+			namelist.push("Sirje");
+			namelist.push("Toomas");
+			
+			var interestlist=[];
+			interestlist.push("Knitting");
+			interestlist.push("Politics");
+			interestlist.push("Cars");
+			interestlist.push("Sudoku");
+			interestlist.push("TV");
+			interestlist.push("Sports");
+			
+			var namecount= namelist.length;
+			var interetscount=interestlist.length;
+			
+			for (var index=0; index<namecount; index++){
+			
+				var textdiv=document.createElement("div");
+				textdiv.setAttribute("id", index+"profile");
+				textdiv.setAttribute("class", "yes");
+				document.getElementById("list").appendChild(textdiv);
+				
+				var profile=document.createElement("img");
+				profile.setAttribute("src", "https://www.searchpng.com/wp-content/uploads/2019/02/Deafult-Profile-Pitcher.png");
+				profile.setAttribute("class", "yes");
+				document.getElementById(index+"profile").appendChild(profile);
+				
+				var paradiv=document.createElement("div");
+				paradiv.setAttribute("id", index+"content");
+				/*paradiv.setAttribute("class", "lefttext");*/
+				document.getElementById(index+"profile").appendChild(paradiv);
+				
+				
+				
+				var nametext=document.createElement("p");
+				nametext.innerHTML=("Name: "+namelist[Math.floor(Math.random()*namecount)]);
+				document.getElementById(index+"content").appendChild(nametext);
+				
+				var agetext=document.createElement("p");
+				agetext.innerHTML=("Age: "+ Math.floor(Math.random()*50+50));
+				/*agetext.setAttribute("class", "time");*/
+				document.getElementById(index+"content").appendChild(agetext);
+				
+				var intersttext=document.createElement("p");
+				intersttext.innerHTML=("Interest: "+interestlist[Math.floor(Math.random()*interetscount)]);
+				document.getElementById(index+"content").appendChild(intersttext);
+				
+			}
+		</script>
+	</body>
+</html>

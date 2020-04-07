@@ -1,0 +1,14 @@
+img{
+	width:auto;
+	height:6em;
+	display:inline-block;
+}
+.yes{
+	display:inline-block;
+	display:flex;
+	background-color:#3D7068;
+	color:white;
+	font-size:20px;
+	border-radius:20px;
+	margin:30px;
+}
