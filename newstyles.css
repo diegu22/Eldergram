@@ -1,0 +1,99 @@
+body {
+	margin: 0;
+	font-family: 'Noto Sans', sans-serif;
+}
+header {
+	height: 10vh;
+	background: #3CB275;
+}
+nav {
+	
+	margin-left: 3vh;
+	height: 9vh;
+	display: flex;
+	align-items: center;
+	align-content: center;
+	
+}
+.navli {
+	display: inline-block;
+	background: #3CB275;
+	font-size: 3vh;
+	color: white;
+	padding: 3.5vh;
+}
+.navli:hover {
+	background: #3D7068;
+}
+.logo {
+	display: inline-block;
+	height: 8vh;
+	margin-right: 3vh;
+}
+.main-pic {
+	height: 90vh;
+	background-image: url("https://media.istockphoto.com/videos/happy-granny-talking-on-phone-and-smiling-communication-with-family-video-id1186627877?s=640x640");
+	background-size: cover;
+	color: white;
+	display: flex;
+	align-items: center;
+}
+.main-text {
+	margin-top: 40vh;
+	margin-left: 9vw;
+
+}
+.main-text h1 {
+	font-size: 5vh;
+}
+.main-text p {
+	font-size: 2.7vh;
+}
+.landingtable{
+	width:60%;
+	margin:auto;
+	margin-bottom:10vh;
+}
+.tableimg{
+	width:30vh;
+	margin:auto;
+	padding:10vh;
+}
+.tableheading{
+	font-size: 30px;
+	padding: 3.5vh;
+}
+.tablepara{
+	text-align:center;
+	color:#636363;
+	font-size: 20px;
+	font-family: 'Noto Sans JP', sans-serif;
+}
+footer ul {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	height: 80px;
+}
+footer {
+	height: 80px;
+	padding-top: 60px;
+	padding-right: 10%;
+	padding-left: 10%;
+	vertical-align: middle;
+	background: #f1f1f1;
+}
+footer ul li img {
+	height: 40px;
+	width: 40px;
+}
+footer ul li {
+	display: inline-block;
+	padding-right: 20px;
+}
+footer p {
+	display: inline-block;
+	float: right;
+	vertical-align: text-top;
+	margin: 10px 0 0 0;
+	color: black;
